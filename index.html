@@ -1,0 +1,133 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Chat GPT 💬</title>
+  <style>
+  body{
+    background: rgba(0,0,255,0.5);
+    font-family: sans-serif;
+  }
+  #phone{
+    width:100%;
+    height:30px;
+  }
+  p{
+      colro:red;
+  }
+    
+    #btn{
+      width:100%;
+      background: rgba(0,255,0,0.5);
+     margin-top:50px;
+      border-radius: 10px;
+      color:rgba(0,0,255,0.3);
+      cursor:pointer;
+      height:30px;
+    }
+ 
+    form{
+      margin-top: 100px;
+      height:auto;
+     padding:20px;
+      background:#fff;
+      box-shadow: rgba(0,255,0,0.3);
+      display: block;
+      border: none;
+    }
+  #vous{
+      background:lightgreen;
+      
+  }
+  i{
+      background:rgba(0,0,255,0.4);
+     
+  }
+  #vole{
+      color:blue;
+  }
+   .message {
+   background:#FFF;
+   padding:40px;
+   width:209px;
+   height:auto;
+   border-radius:20px;
+   }
+   #bot{
+     color:red;
+   }
+  
+  
+    
+  </style>
+</head>
+<body>
+   <div class="message">
+     <h2><b>Messagerie </b></h2>
+     <br>
+      
+  <p id="vous">Vous👤:<span id="vole"></p></span>
+ <br>
+<i>Chatbot💬:</i><p id="bot"><span id="bot"></p></span>
+ 
+ </div> 
+    
+    
+    
+  <form action="" id="form">
+    <b>Chat GPT</b>
+   
+  <input type="text" id="phone"placeholder ="search.."required> 
+  <br>
+  <button type="submit"id="btn">S E N D</button>
+  
+    
+  </form>
+    <button type="reset" id="restart"> restart the bot</button>
+
+  <script>
+  
+ 
+    const send = document.getElementById('form');
+    send.addEventListener('submit',(e)=>{
+      e.preventDefault();
+      const input = document.getElementById('phone');
+     const affiche = document.getElementById('vole').innerHTML=input.value;
+    
+      
+      
+    });
+    
+const btn = document.getElementById('btn');
+btn.addEventListener('click', function() {
+  let message = "impossible de trouver le mot(⁠٥⁠↼⁠_⁠↼⁠)";
+  const salut = document.getElementById('phone').value;
+  setTimeout(function() {
+    const bot = document.getElementById('bot').innerHTML = message + salut;
+  }, 2000); // 2000ms = 2 secondes
+
+    
+   
+    });
+    const restar = document.getElementById('restart');
+    restart.addEventListener('click',()=>{
+      window.location.href='gg.html';
+      confirm("bot restarted!");
+    }
+   );
+   function welcome(){
+     window.addEventListener('load',  (e)=>{
+     e.preventDefault();
+     alert("salut moi c'est Chat GPT créer par maystro j'espère qu'on sera de bons ami(e)(⁠◍⁠•⁠ᴗ⁠•⁠◍⁠)>")
+     
+   });
+    
+    
+     
+   }
+   welcome()
+   
+  </script>
+</body>
+</html>
